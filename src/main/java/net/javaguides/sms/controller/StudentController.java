@@ -1,5 +1,13 @@
 package net.javaguides.sms.controller;
 
+
+import net.javaguides.sms.entity.Student;
+import net.javaguides.sms.entity.Role;
+import net.javaguides.sms.service.SecurityService;
+import net.javaguides.sms.service.StudentService;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,12 +21,20 @@ import net.javaguides.sms.service.StudentService;
 @Controller
 public class StudentController {
 	
+	@Autowired
 	private StudentService studentService;
+	
+	 @Autowired
+	 private SecurityService securityService;
+	 
+	 @Autowired
+	 private StudentValidator userValidator;
 
 	public StudentController(StudentService studentService) {
 		super();
 		this.studentService = studentService;
 	}
+	
 	
 	// handler method to handle list students and return mode and view
 	@GetMapping("/")

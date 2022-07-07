@@ -43,4 +43,16 @@ public class StudentServiceImpl implements StudentService{
 		studentRepository.deleteById(id);	
 	}
 
+	@Override
+	public void save(Student user) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Student findByUsername(String username) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

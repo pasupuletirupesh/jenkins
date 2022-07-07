@@ -1,4 +1,4 @@
-FROM openjdk:8
+FROM openjdk:18
 MAINTAINER pasupulaterupesh9@gmail.com
 VOLUME /tmp
 EXPOSE 8081
